@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "malibun23:utils": {
+      "path":"/home/vlad/WebstormProjects/packages/utils"
+    },
+    "malibun23:httpclient":{
+      "path":"/home/vlad/WebstormProjects/packages/httpclient"
+    }
+  }
+}
