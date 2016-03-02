@@ -11,5 +11,4 @@ Proxies.schema = new SimpleSchema({
     'backconnect.port':{type:Number,optional:true,defaultValue:null},
     'backconnect.login':{type:String,optional:true,defaultValue:null},
     'backconnect.pass':{type:String,optional:true,defaultValue:null},
-
 });

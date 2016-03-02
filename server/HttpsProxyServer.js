@@ -82,10 +82,7 @@ HttpsProxyServer = function(proxy){
             }).end();
 
         }else{
-            /*var socket = net.connect(ph.port, ph.hostname, function() {
-                socket.write(head);
-                socketRequest.write("HTTP/" + request.httpVersion + " 200 Connection established\r\n\r\n")
-            });*/
+
             var socket = net.createConnection({
                 port:ph.port,
                 host: ph.hostname,

@@ -1,8 +1,9 @@
 Proxies = new Mongo.Collection('proxies');
 
 Proxies.PROTOCOL_HTTP = 'http';
-//Proxies.PROTOCOL_HTTPS = 'https';
 Proxies.PROTOCOL_SOCKS = 'socks';
+Proxies.PROTOCOL_SOCKS4 = 'socks4';
+Proxies.PROTOCOL_SOCKS5 = 'socks5';
 
 Meteor.startup(function(){
     Proxies.attachSchema(Proxies.schema);

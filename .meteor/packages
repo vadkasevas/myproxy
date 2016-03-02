@@ -16,8 +16,16 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 raix:eventemitter
+iron:router
 
 meteorhacks:npm
+
+twbs:bootstrap
+accounts-base
+accounts-password
+ian:accounts-ui-bootstrap-3
+alanning:roles
+mrt:accounts-vk
 
 insecure                # Allow all DB writes from clients (for prototyping)
 
@@ -31,5 +39,9 @@ aldeed:autoform
 aldeed:collection2
 manuelschoebel:ms-seo
 check
+
+cfs:power-queue
+cfs:micro-queue
+cfs:reactive-list
 
 npm-container

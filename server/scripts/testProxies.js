@@ -1,5 +1,5 @@
 Meteor.startup(function(){
-    //return;
+    return;
 
     HttpClient.waitFreeProxies(function(){
         Proxies.autofill();
