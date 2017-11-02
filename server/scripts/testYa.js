@@ -1,0 +1,11 @@
+Meteor.startup(function(){
+    HttpClient.forOptions({
+        url:'http://ya.ru',
+        proxy:{
+            ip:'163.172.212.245',port:4002,login:'movses21',pass:'instagram','protocol':'http'
+        }
+    }).execute().then(function(err,content){
+        console.log('err:',err);
+        console.log('content:',content);
+    });
+});

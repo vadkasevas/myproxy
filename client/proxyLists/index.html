@@ -1,0 +1,24 @@
+<template name="proxyListsIndex">
+    {{> breadcrumb}}
+    <a href="/proxyList/create">Создать новый список прокси...</a>
+    {{>proxyListsTable}}
+</template>
+
+<template name="proxyListsTable">
+    {{> pagesNav}}
+    {{> pages}}
+    {{> pagesNav}}
+</template>
+
+<template name="proxyListRow">
+    <tr class="proxyListRow">
+        <td>
+            <a href="/proxyList/view/{{_id}}/">{{name}}</a>
+            <a href="/proxyList/update/{{_id}}/">Изменить</a>
+        </td>
+        <td>{{proxiesCount}}</td>
+        <td>{{activeProxiesCount}}</td>
+        <td class="delete_action"><a href="#" class="proxyListDeleteButton">Удалить</a></td>
+        <td><a href="/proxyList/insertProxies/{{_id}}">Добавить прокси</a></td>
+    </tr>
+</template>

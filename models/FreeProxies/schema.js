@@ -7,7 +7,6 @@ FreeProxies.schema = new SimpleSchema({
 
     delay:{type:Number,label:'Средняя задержка',optional:true,defaultValue:0},
     successPercent:{type:Number,label:'% Успешности',optional:true,defaultValue:0},
-    checkDate:{type:Date,label:'Время проверки'},
 
     'anonimity':{type:String,label:'Анонимность'},
     'referer':{type:Boolean,label:'Реферер'},
@@ -16,15 +15,25 @@ FreeProxies.schema = new SimpleSchema({
     'getParams':{type:Boolean,label:'GET'},
     'postData':{type:Boolean,label:'POST'},
 
+    'requests.$.date':{type:Date,label:'Время запроса'},
+    'requests.$.success':{type:Boolean,label:'Удачно'},
+
     'checks.$.date':{type:Date,label:'Время проверки'},
     'checks.$.active':{type:Boolean,label:'Результат проверки'},
-    'check.$.delay':{type:Number,label:'Задержка'},
-    'check.$.anonimity':{type:String,label:'Анонимность'},
-    'check.$.referer':{type:Boolean,label:'Реферер'},
-    'check.$.userAgent':{type:Boolean,label:'Юзерагент'},
-    'check.$.cookies':{type:Boolean,label:'Кукиес'},
-    'check.$.getParams':{type:Boolean,label:'GET'},
-    'check.$.postData':{type:Boolean,label:'POST'},
+    'checks.$.delay':{type:Number,label:'Задержка'},
+    'checks.$.anonimity':{type:String,label:'Анонимность'},
+    'checks.$.referer':{type:Boolean,label:'Реферер'},
+    'checks.$.userAgent':{type:Boolean,label:'Юзерагент'},
+    'checks.$.cookies':{type:Boolean,label:'Кукиес'},
+    'checks.$.getParams':{type:Boolean,label:'GET'},
+    'checks.$.postData':{type:Boolean,label:'POST'},
+
+    'google.date':{type:Date,label:'Дата поиска в гугле',optional:true,defaultValue:null},
+    'google.locked':{type:Boolean,label:'Залочен',optional:true,defaultValue:false},
+
+    'check.date':{type:Date,label:'Дата проверки',optional:true,defaultValue:null},
+    'check.locked':{type:Boolean,label:'Залочен',optional:true,defaultValue:false},
+
 
 });
 
@@ -37,3 +46,17 @@ FreeProxies.PROTOCOL_SOCKS5 = 'socks5';
 FreeProxies.ANONIMITY_HIGH = 'high';
 FreeProxies.ANONIMITY_LOW = 'low';
 FreeProxies.ANONIMITY_TRANSPARENT = 'transparent';
+
+if(Meteor.isServer){
+    Meteor.startup(function(){
+        FreeProxies._ensureIndex({'active': 1});
+
+        FreeProxies._ensureIndex({'check.date': 1});
+        FreeProxies._ensureIndex({'check.locked': 1});
+
+        FreeProxies._ensureIndex({'google.date': 1});
+        FreeProxies._ensureIndex({'check.locked': 1});
+
+    });
+}
+

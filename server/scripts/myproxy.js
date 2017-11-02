@@ -59,10 +59,6 @@ return;
             path: ph.hostname + ':' + (ph.port || 80),
             headers: request.headers || {}
         };
-        /*if(gw.auth)
-            options.headers['Proxy-Authorization'] = 'Basic ' + new Buffer(gw.auth).toString('base64');
-            */
-        // console.log(options)
 
         var socket = net.connect(ph.port, ph.hostname, function() {
             socket.write(head);
@@ -104,7 +100,7 @@ return;
             socketRequest.on('error', function() { socket.end() });
         });//.end();
         */
-    }).listen(8080,proxy.localAddress);
+    }).listen(8888,proxy.localAddress);
 
 
 

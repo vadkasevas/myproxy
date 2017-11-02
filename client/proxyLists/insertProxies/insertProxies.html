@@ -1,0 +1,18 @@
+<template name="insertProxies">
+    {{> breadcrumb}}
+    <div style="max-width:1200px;margin-left:10px;">
+        {{#autoForm id="insertProxiesForm" schema=insertProxiesSchema}}
+            <table style="width:100%;border-spacing:10px 11px;">
+                {{>afQuickField name="ip"}}
+                {{>afQuickField name="login"}}
+                {{>afQuickField name="pass"}}
+                {{>afQuickField name="incomingInterface"}}
+                {{>afQuickField name="outgoingInterfaceFrom"}}
+                {{>afQuickField name="outgoingInterfaceTo"}}
+                {{>afQuickField name="allowedIps"}}
+                {{>afQuickField name="count"}}
+            </table>
+            <button type="submit">Создать</button>
+        {{/autoForm}}
+    </div>
+</template>

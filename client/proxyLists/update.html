@@ -1,0 +1,9 @@
+<template name="proxyListUpdate">
+    {{> breadcrumb}}
+    {{#autoForm collection="ProxyLists" type="update" doc=this id="proxyListUpdateForm"}}
+        <div style="margin-left:30px;margin-right:30px;">
+            {{>afQuickField name="name" size=40}}
+        </div>
+        <button type="submit">Сохранить</button>
+    {{/autoForm}}
+</template>

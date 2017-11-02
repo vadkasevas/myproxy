@@ -3,7 +3,7 @@
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
-
+frpz:dns
 meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 mongo                   # The database Meteor supports right now
@@ -17,6 +17,8 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 raix:eventemitter
 iron:router
+monbro:iron-router-breadcrumb
+meteorhacks:cluster
 
 meteorhacks:npm
 
@@ -32,16 +34,27 @@ insecure                # Allow all DB writes from clients (for prototyping)
 malibun23:extschema
 malibun23:httpclient
 malibun23:utils
+malibun23:redirectools
 
 dburles:collection-helpers
 aldeed:simple-schema
 aldeed:autoform
 aldeed:collection2
 manuelschoebel:ms-seo
+mikowals:batch-insert
 check
+alethes:pages
 
 cfs:power-queue
 cfs:micro-queue
 cfs:reactive-list
+
+jparker:crypto-hmac
+jparker:crypto-core
+jparker:crypto-sha256
+jparker:crypto-md5
+jparker:crypto-base64
+
+miktam:server-cache
 
 npm-container

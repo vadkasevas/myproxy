@@ -5,6 +5,12 @@
     },
     "malibun23:httpclient":{
       "path":"/home/vlad/WebstormProjects/packages/httpclient"
+    },
+    "malibun23:redirectools":{
+      "path":"/home/vlad/WebstormProjects/packages/redirectools"
+    },
+    "malibun23:proxyparser":{
+      "path":"/home/vlad/WebstormProjects/packages/malibun23:proxyparser"
     }
   }
 }
